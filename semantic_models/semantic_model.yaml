@@ -1,0 +1,71 @@
+name: retail_ai_semantic_model
+
+tables:
+
+  - name: sales
+    base_table:
+      database: RETAIL_AI
+      schema: RETAIL
+      table: STORE_DATA
+
+    dimensions:
+
+      - name: order_id
+        expr: ORDER_ID
+        data_type: string
+
+      - name: customer_id
+        expr: CUSTOMER_ID
+        data_type: string
+
+      - name: product_id
+        expr: PRODUCT_ID
+        data_type: string
+
+      - name: category
+        expr: CATEGORY_OF_GOODS
+        data_type: string
+
+      - name: sub_category
+        expr: "Sub-Category"
+        data_type: string
+
+      - name: region
+        expr: REGION
+        data_type: string
+
+      - name: state
+        expr: STATE
+        data_type: string
+
+      - name: outlet_type
+        expr: OUTLET_TYPE
+        data_type: string
+
+      - name: city_type
+        expr: CITY_TYPE
+        data_type: string
+
+      - name: sales_date
+        expr: SALES_DATE
+        data_type: date
+
+    measures:
+
+      - name: total_sales
+        expr: SUM(SALES)
+
+      - name: total_profit
+        expr: SUM(PROFIT)
+
+      - name: total_quantity
+        expr: SUM(QUANTITY)
+
+      - name: total_orders
+        expr: COUNT(DISTINCT ORDER_ID)
+
+      - name: average_order_value
+        expr: SUM(SALES)/COUNT(DISTINCT ORDER_ID)
+
+      - name: profit_margin
+        expr: SUM(PROFIT)/SUM(SALES)*100
