@@ -52,20 +52,17 @@ tables:
 
     measures:
 
-      - name: total_sales
-        expr: SUM(SALES)
+      - name: sales
+        expr: SALES
 
-      - name: total_profit
-        expr: SUM(PROFIT)
+      - name: profit
+        expr: PROFIT
 
-      - name: total_quantity
-        expr: SUM(QUANTITY)
+      - name: quantity
+        expr: QUANTITY
 
-      - name: total_orders
-        expr: COUNT(DISTINCT ORDER_ID)
+      - name: order_id
+        expr: ORDER_ID
 
-      - name: average_order_value
-        expr: SUM(SALES)/COUNT(DISTINCT ORDER_ID)
-
-      - name: profit_margin
-        expr: SUM(PROFIT)/SUM(SALES)*100
+      - name: discount
+        expr: DISCOUNT
