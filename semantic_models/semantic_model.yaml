@@ -61,8 +61,5 @@ tables:
       - name: quantity
         expr: QUANTITY
 
-      - name: order_id
-        expr: ORDER_ID
-
       - name: discount
         expr: DISCOUNT
