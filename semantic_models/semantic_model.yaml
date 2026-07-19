@@ -6,7 +6,7 @@ tables:
     base_table:
       database: RETAIL_AI
       schema: RETAIL
-      table: VW_STORE_DATA
+      table: STORE_DATA
 
     dimensions:
 
