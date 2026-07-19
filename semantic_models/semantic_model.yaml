@@ -27,7 +27,7 @@ tables:
         data_type: string
 
       - name: sub_category
-        expr: SUB_CATEGORY
+        expr: "Sub-Category"
         data_type: string
 
       - name: region
