@@ -6,7 +6,7 @@ tables:
     base_table:
       database: RETAIL_AI
       schema: RETAIL
-      table: STORE_DATA
+      table: VW_STORE_DATA
 
     dimensions:
 
@@ -27,7 +27,7 @@ tables:
         data_type: string
 
       - name: sub_category
-        expr: "Sub-Category"
+        expr: SUB_CATEGORY
         data_type: string
 
       - name: region
